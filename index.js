@@ -14,7 +14,7 @@ if (ok) {
 btn.addEventListener("click", () => {
     modal.classList.remove("on");
     oke.classList.add("ok");
-    oke.innerHTML = `Bạn đã đăng ký voucher may mắn thành công!!!`;
+    oke.innerHTML = `Bạn đã đăng ký nhận Voucher may mắn tháng 7 thành công!!!`;
 });
 lucky.addEventListener("click", function() {
     localStorage.setItem("key", "oke");
