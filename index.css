@@ -1,0 +1,249 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* _______________________________________________________________ */
+
+#main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, #ff5f6d, #ffdac1);
+}
+
+.lucky {
+    padding-top: 100px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.lucky>img {
+    cursor: pointer;
+    transform: rotate(-555deg);
+    transition: 4s ease-out;
+    user-select: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.25s linear;
+    opacity: 1;
+    z-index: -1;
+}
+
+.modal-op {
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+    opacity: 0.2;
+}
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 350px;
+    height: 450px;
+    background-color: white;
+}
+
+#voucherField {
+    display: none;
+}
+
+.form-content {
+    width: 100%;
+    height: 220px;
+}
+
+.form-fill {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-content>img {
+    width: 100%;
+}
+
+.form-fill>input {
+    width: 250px;
+    height: 30px;
+}
+
+.form-fill>input:focus {
+    outline: none;
+}
+
+.submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    background-color: #ff5f6d;
+    padding: 10px 15px;
+}
+
+select {
+    padding: 0;
+    width: 250px;
+}
+
+.on {
+    opacity: 1 !important;
+    z-index: 99 !important;
+}
