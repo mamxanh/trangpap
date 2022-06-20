@@ -152,9 +152,20 @@ table {
 
 .lucky>img {
     cursor: pointer;
-    transform: rotate(-555deg);
     transition: 4s ease-out;
     user-select: none;
+}
+
+.check-ok {
+    padding: 5px 10px;
+    font-size: 20px;
+    display: none;
+    color: white;
+    font-weight: bold;
+}
+
+.ok {
+    display: block !important;
 }
 
 .modal {

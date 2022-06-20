@@ -2,14 +2,25 @@ const lucky = document.querySelector(".lucky-img");
 const modal = document.querySelector(".modal");
 const voucher = document.querySelector(".form-voucher");
 const btn = document.querySelector(".btn");
+const oke = document.querySelector(".check-ok");
 const voucherField = document.querySelector("#voucherField");
+let ok = localStorage.getItem("key");
+let voucherNumber = localStorage.getItem("voucher");
+if (ok) {
+    oke.classList.add("ok");
+    oke.innerHTML = `Bạn đã trúng Voucher ${voucherNumber} hãy đến địa điểm đã đăng kí để sử dụng`;
+    lucky.style.pointerEvents = "none";
+}
 btn.addEventListener("click", () => {
     modal.classList.remove("on");
+    oke.classList.add("ok");
+    oke.innerHTML = `Bạn đã đăng ký voucher may mắn thành công!!!`;
 });
 lucky.addEventListener("click", function() {
+    localStorage.setItem("key", "oke");
     setTimeout(function() {
         modal.classList.add("on");
-    }, 4300);
+    }, 4400);
     let deg = Math.floor(Math.random() * 4);
     switch (deg) {
         case 1:
@@ -17,24 +28,32 @@ lucky.addEventListener("click", function() {
             lucky.style.pointerEvents = "none";
             voucher.innerHTML = "Voucher 1";
             voucherField.value = "Voucher 1";
+            localStorage.setItem("voucher", "1");
+
             break;
         case 2:
             lucky.style.transform = "rotate(1060deg)";
             lucky.style.pointerEvents = "none";
             voucher.innerHTML = "Voucher 2";
             voucherField.value = "Voucher 2";
+            localStorage.setItem("voucher", "2");
+
             break;
         case 3:
             lucky.style.transform = "rotate(1720deg)";
             lucky.style.pointerEvents = "none";
             voucher.innerHTML = "Voucher 3";
             voucherField.value = "Voucher 3";
+            localStorage.setItem("voucher", "3");
+
             break;
         case 4:
             lucky.style.transform = "rotate(1480deg)";
             lucky.style.pointerEvents = "none";
             voucher.innerHTML = "Voucher 4";
             voucherField.value = "Voucher 4";
+            localStorage.setItem("voucher", "4");
+
             break;
         default:
     }
