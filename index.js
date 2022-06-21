@@ -3,61 +3,66 @@ const modal = document.querySelector(".modal");
 const voucher = document.querySelector(".form-voucher");
 const btn = document.querySelector(".btn");
 const oke = document.querySelector(".check-ok");
+const alert = document.querySelector(".check-alert");
+const nameF = document.querySelector("#nameField");
+const phoneF = document.querySelector("#phoneField");
 const voucherField = document.querySelector("#voucherField");
 let ok = localStorage.getItem("key");
 let voucherNumber = localStorage.getItem("voucher");
-if (ok) {
-    oke.classList.add("ok");
-    oke.innerHTML = `Bạn đã trúng Voucher ${voucherNumber} hãy đến địa điểm đã đăng kí để sử dụng`;
+
+if (voucherNumber && voucherNumber !== null) {
+    alert.innerHTML = `Bạn đã trúng Voucher ${voucherNumber} hãy đến địa điểm đã đăng kí để sử dụng`;
+    alert.style.transform = "translateX(0)";
+    setTimeout(() => {
+        alert.style.transform = "translateX(-150%)";
+    }, 12200);
     lucky.style.pointerEvents = "none";
 }
-btn.addEventListener("click", () => {
-    modal.classList.remove("on");
-    oke.classList.add("ok");
-    oke.innerHTML = `Bạn đã đăng ký nhận Voucher may mắn tháng 7 thành công!!!`;
-});
+
 lucky.addEventListener("click", function() {
-    localStorage.setItem("key", "oke");
     setTimeout(function() {
         modal.classList.add("on");
-    }, 4400);
+    }, 4500);
+    const handleVoucher = (deg) => {
+        lucky.style.pointerEvents = "none";
+        voucher.innerHTML = `Voucher ${deg}`;
+        voucherField.value = `Voucher ${deg}`;
+        localStorage.setItem("voucher", `${deg}`);
+    };
     let deg = Math.floor(Math.random() * 4);
     switch (deg) {
         case 1:
             lucky.style.transform = "rotate(1360deg)";
-            lucky.style.pointerEvents = "none";
-            voucher.innerHTML = "Voucher 1";
-            voucherField.value = "Voucher 1";
-            localStorage.setItem("voucher", "1");
-
+            handleVoucher(deg);
             break;
         case 2:
             lucky.style.transform = "rotate(1060deg)";
-            lucky.style.pointerEvents = "none";
-            voucher.innerHTML = "Voucher 2";
-            voucherField.value = "Voucher 2";
-            localStorage.setItem("voucher", "2");
-
+            handleVoucher(deg);
             break;
         case 3:
             lucky.style.transform = "rotate(1720deg)";
-            lucky.style.pointerEvents = "none";
-            voucher.innerHTML = "Voucher 3";
-            voucherField.value = "Voucher 3";
-            localStorage.setItem("voucher", "3");
-
+            handleVoucher(deg);
             break;
         case 4:
             lucky.style.transform = "rotate(1480deg)";
-            lucky.style.pointerEvents = "none";
-            voucher.innerHTML = "Voucher 4";
-            voucherField.value = "Voucher 4";
-            localStorage.setItem("voucher", "4");
-
+            handleVoucher(deg);
             break;
         default:
     }
     swi;
+});
+btn.addEventListener("click", () => {
+    if (nameF.value.length && phoneF.value.length) {
+        localStorage.setItem("key", "oke");
+        modal.classList.remove("on");
+        alert.style.transform = "translateX(0)";
+        setTimeout(() => {
+            alert.style.transform = "translateX(-150%)";
+        }, 4200);
+    } else {
+        alert("Vui lòng nhập đầy đủ thông tin");
+        return;
+    }
 });
 
 function postToGoogle() {

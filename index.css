@@ -131,6 +131,11 @@ table {
     border-spacing: 0;
 }
 
+:root {
+    --pastel-500: #ff5f6d;
+    --pastel-100: #ffcec3;
+}
+
 
 /* _______________________________________________________________ */
 
@@ -139,7 +144,18 @@ table {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-image: linear-gradient(to right, #ff5f6d, #ffdac1);
+    background-image: linear-gradient( to right, var(--pastel-500), var(--pastel-100));
+}
+
+.bg-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTZweCIgaGVpZ2h0PSI5NnB4IiB2aWV3Qm94PSIwIDAgOTYgOTYiIHpvb21BbmRQYW49ImRpc2FibGUiPjxzdHlsZT5jaXJjbGUge2ZpbGw6IHRyYW5zcGFyZW50OyBzdHJva2U6ICNmZmY7IHN0cm9rZS13aWR0aDogMS41cHg7IH08L3N0eWxlPjxkZWZzPjxjbGlwUGF0aCBpZD0iY29ybmVyIj48cG9seWdvbiBwb2ludHM9IjAsMCA0OCwwIDQ4LDQ4IDk2LDQ4IDk2LDk2IDAsOTYiIC8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI2Nvcm5lcikiPjxjaXJjbGUgY3g9IjQ4IiBjeT0iNDgiIHI9IjMyIi8+PC9nPjwvc3ZnPg==");
 }
 
 .lucky {
@@ -158,11 +174,47 @@ table {
 }
 
 .check-ok {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 5px 10px;
     font-size: 25px;
-    display: none;
-    color: white;
+    color: #fff;
     font-weight: bold;
+}
+
+.check-alert {
+    background-color: #fff;
+    padding: 0 15px;
+    padding-left: 25px;
+    position: fixed;
+    width: 450px;
+    height: 80px;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: var(--pastel-500);
+    font-weight: bold;
+    line-height: 1.6;
+    box-shadow: 0 0 10px var(--pastel-100);
+    border-radius: 10px;
+    transition: 0.5s ease;
+    transform: translateX(-150%);
+}
+
+.check-alert::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background: rgb(45, 255, 181);
+    border-radius: 100px 0 0 100px;
 }
 
 .ok {
@@ -205,7 +257,7 @@ table {
 .form {
     position: absolute;
     top: 50%;
-    padding: 10px;
+    padding: 15px;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
@@ -230,7 +282,7 @@ table {
 
 .form-fill {
     width: 100%;
-    padding-top: 32px;
+    padding-top: 37px;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -254,10 +306,12 @@ table {
 .form-fill>input {
     width: 320px;
     height: 30px;
+    border: 2px solid var(--pastel-100);
 }
 
 .form-fill>input:focus {
-    outline: none;
+    outline: none !important;
+    border: 2px solid var(--pastel-500);
 }
 
 .form-voucher {
@@ -269,6 +323,7 @@ table {
 
 .form-voucher1 {
     color: #333;
+    line-height: 1.5;
 }
 
 .submit {
@@ -283,9 +338,15 @@ table {
     cursor: pointer;
     border: none;
     background-color: #ff5f6d;
-    padding: 10px 15px;
+    padding: 8px 30px;
     border-radius: 50px;
+    font-size: 14px;
     color: white;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.6;
 }
 
 .btn:hover {
@@ -297,6 +358,11 @@ select {
     padding: 0;
     width: 200px;
     height: 25px;
+    border: 2px solid var(--pastel-100);
+}
+
+select:focus {
+    border: 2px solid var(--pastel-500);
 }
 
 .on {
