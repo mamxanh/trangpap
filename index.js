@@ -11,18 +11,18 @@ let ok = localStorage.getItem("key");
 let voucherNumber = localStorage.getItem("voucher");
 
 if (voucherNumber && voucherNumber !== null) {
-    alert.innerHTML = `Bạn đã trúng Voucher ${voucherNumber} hãy đến địa điểm đã đăng kí để sử dụng`;
+    alert.innerHTML = `Bạn đã quay và trúng Voucher ${voucherNumber} rồi hãy đến địa điểm đã đăng kí để sử dụng thôi nào !!!`;
     alert.style.transform = "translateX(0)";
     setTimeout(() => {
         alert.style.transform = "translateX(-150%)";
-    }, 12200);
+    }, 10200);
     lucky.style.pointerEvents = "none";
 }
 
 lucky.addEventListener("click", function() {
     setTimeout(function() {
         modal.classList.add("on");
-    }, 4500);
+    }, 4700);
     const handleVoucher = (deg) => {
         lucky.style.pointerEvents = "none";
         voucher.innerHTML = `Voucher ${deg}`;
@@ -49,7 +49,6 @@ lucky.addEventListener("click", function() {
             break;
         default:
     }
-    swi;
 });
 btn.addEventListener("click", () => {
     if (nameF.value.length && phoneF.value.length) {

@@ -197,7 +197,7 @@ table {
     align-items: center;
     text-align: center;
     justify-content: center;
-    color: var(--pastel-500);
+    color: rgb(0, 62, 25);
     font-weight: bold;
     line-height: 1.6;
     box-shadow: 0 0 10px var(--pastel-100);
@@ -304,14 +304,14 @@ table {
 }
 
 .form-fill>input {
-    width: 320px;
+    width: 345px;
     height: 30px;
     border: 2px solid var(--pastel-100);
 }
 
 .form-fill>input:focus {
     outline: none !important;
-    border: 2px solid var(--pastel-500);
+    border: 1.5px solid var(--pastel-500);
 }
 
 .form-voucher {
@@ -356,7 +356,7 @@ table {
 
 select {
     padding: 0;
-    width: 200px;
+    width: 250px;
     height: 25px;
     border: 2px solid var(--pastel-100);
 }
@@ -377,11 +377,12 @@ select:focus {
     }
     .form {
         width: 310px;
+        margin-top: -100px;
     }
     .form-fill>input {
         width: 250px;
     }
     .check-alert {
-        width: 340px;
+        width: 325px;
     }
 }
