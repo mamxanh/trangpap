@@ -132,7 +132,7 @@ table {
 }
 
 :root {
-    --pastel-500: #ff5f6d;
+    --pastel-500: #ff7681;
     --pastel-100: #ffcec3;
 }
 
@@ -201,7 +201,7 @@ table {
     font-weight: bold;
     line-height: 1.6;
     box-shadow: 0 0 10px var(--pastel-100);
-    border-radius: 10px;
+    border-radius: 5px;
     transition: 0.5s ease;
     transform: translateX(-150%);
 }
@@ -213,8 +213,8 @@ table {
     left: 0;
     width: 7px;
     height: 100%;
-    background: rgb(45, 255, 181);
-    border-radius: 100px 0 0 100px;
+    background: rgb(0, 211, 137);
+    border-radius: 10px 0 0 50px;
 }
 
 .ok {
