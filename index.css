@@ -159,23 +159,25 @@ table {
 }
 .spiner {
   z-index: 1;
-  width: 85%;
-  bottom: 40px;
-  height: 100%;
-  position: relative;
-  left: -10%;
+  width: 55%;
+  height: auto;
+  position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  right: 0px;
+  bottom: 50px;
 }
 .spiner > img:nth-child(2) {
   position: absolute;
-  bottom: 10%;
+  top: 50%;
   left: 48%;
+
   transform: translate(-50%, -50%);
   cursor: pointer;
   user-select: none;
+  width: 110px;
 }
 /* .spiner > img:nth-child(3) {
   width: 85%;
@@ -187,8 +189,7 @@ table {
 } */
 
 .spiner > img:nth-child(1) {
-  width: 83%;
-  margin-top: -10px;
+  width: 90%;
 }
 .check-ok {
   height: 60px;
@@ -406,14 +407,12 @@ select:focus {
   text-transform: uppercase;
 }
 .img_btn.zoom {
-  width: 138px !important;
+  width: 112px !important;
 }
-.ro90 {
-  transform: rotate(90deg);
-}
-@media (min-width: 1150px) {
+
+@media (min-width: 1650px) {
   .img_btn.zoom {
-    width: 66px !important;
+    width: 70px !important;
   }
   .lucky > img {
     width: 320px !important;
@@ -431,8 +430,8 @@ select:focus {
   }
   .spiner > img:nth-child(2) {
     position: absolute;
-    top: 50%;
-    left: 48%;
+    bottom: 100px;
+    left: 48.5%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     width: 60px;
@@ -497,7 +496,7 @@ select:focus {
     width: 450px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 900px) {
   .img_btn.zoom {
     width: 62px !important;
   }
@@ -519,6 +518,18 @@ select:focus {
   }
   .spiner > img:nth-child(2) {
     width: 60px;
+  }
+  .spiner {
+    z-index: 1;
+    width: 36%;
+    height: auto;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 10%;
+    bottom: 10px;
   }
   .form-text {
     font-size: 13px;
