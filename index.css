@@ -167,7 +167,7 @@ table {
   justify-content: center;
   align-items: center;
   right: 0px;
-  bottom: 50px;
+  bottom: 27px;
 }
 .spiner > img:nth-child(2) {
   position: absolute;
@@ -189,7 +189,7 @@ table {
 } */
 
 .spiner > img:nth-child(1) {
-  width: 90%;
+  width: 82%;
 }
 .check-ok {
   height: 60px;
