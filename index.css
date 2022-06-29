@@ -140,6 +140,8 @@ table {
   display: none;
 }
 .firer {
+  z-index: 99999999 !important;
+  pointer-events: none;
 }
 #main {
   position: relative;

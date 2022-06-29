@@ -37,8 +37,10 @@ imgbtn.addEventListener("click", function () {
   nameF.value = "";
   phoneF.value = "";
   setTimeout(function () {
-    modal.classList.add("on");
     PP(".firer").classList.remove("fire");
+    setTimeout(() => {
+      modal.classList.add("on");
+    }, 200);
   }, 6000);
   lucky.style.transition = "5.5s ease-out";
   let deg = Math.floor(Math.random() * 99);
