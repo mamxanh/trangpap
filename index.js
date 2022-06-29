@@ -38,6 +38,7 @@ imgbtn.addEventListener("click", function () {
   phoneF.value = "";
   setTimeout(function () {
     modal.classList.add("on");
+    PP(".firer").classList.remove("fire");
   }, 6000);
   lucky.style.transition = "5.5s ease-out";
   let deg = Math.floor(Math.random() * 99);
@@ -66,6 +67,7 @@ btn.addEventListener("click", () => {
   if (nameF.value.length && phoneF.value.length) {
     lucky.style.transition = "0s ease-out";
     lucky.style.transform = "rotate(0deg)";
+    PP(".firer").classList.add("fire");
     nameA = $("#nameField").val();
     email = $("#phoneField").val();
     mess = $("#placeField").val();
