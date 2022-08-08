@@ -78,12 +78,12 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -99,91 +99,90 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
 
 body {
-  line-height: 1;
-  font-family: sans-serif;
+    line-height: 1;
+    font-family: sans-serif;
 }
 
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+    content: "";
+    content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 :root {
-  --pastel-500: #76e6ff;
-  --pastel-100: #ffcec3;
+    --pastel-500: #76e6ff;
+    --pastel-100: #ffcec3;
 }
 
 /* _______________________________________________________________ */
 .fire {
-  display: none;
+    display: none;
 }
 .firer {
-  z-index: 99999999 !important;
-  pointer-events: none;
+    z-index: 99999999 !important;
+    width: 37% !important;
+    pointer-events: none;
 }
 #main {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 .bg_img {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  height: 100vh;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
 }
 .spin_container {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .spiner {
-  z-index: 1;
-  width: 55%;
-  height: auto;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  right: 0px;
-  bottom: 27px;
+    z-index: 1;
+    width: 55%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .spiner > img:nth-child(2) {
-  position: absolute;
-  top: 50%;
-  left: 48%;
+    position: absolute;
+    top: 61%;
+    left: 49%;
 
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  user-select: none;
-  width: 110px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    user-select: none;
+    width: 110px;
 }
 /* .spiner > img:nth-child(3) {
   width: 85%;
@@ -195,307 +194,307 @@ table {
 } */
 
 .spiner > img:nth-child(1) {
-  width: 82%;
+    width: 82%;
 }
 .check-ok {
-  height: 60px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 5px 10px;
-  font-size: 25px;
-  color: #fff;
-  font-weight: bold;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
 }
 
 .check-alert {
-  background-color: #fff;
-  padding: 0 15px;
-  padding-left: 25px;
-  position: fixed;
-  width: 450px;
-  height: 80px;
-  top: 8px;
-  left: 8px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  color: rgb(0, 62, 25);
-  font-weight: bold;
-  line-height: 1.6;
-  box-shadow: 0 0 5px var(--pastel-100);
-  border-radius: 5px;
-  transition: 0.5s ease;
-  transform: translateX(-150%);
+    background-color: #fff;
+    padding: 0 15px;
+    padding-left: 25px;
+    position: fixed;
+    width: 450px;
+    height: 80px;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: rgb(0, 62, 25);
+    font-weight: bold;
+    line-height: 1.6;
+    box-shadow: 0 0 5px var(--pastel-100);
+    border-radius: 5px;
+    transition: 0.5s ease;
+    transform: translateX(-150%);
 }
 
 .check-alert::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 7px;
-  height: 100%;
-  background: rgb(0, 211, 137);
-  border-radius: 10px 0 0 50px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background: rgb(0, 211, 137);
+    border-radius: 10px 0 0 50px;
 }
 
 .ok {
-  display: block !important;
+    display: block !important;
 }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-  transition: 0.25s linear;
-  opacity: 0;
-  z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    transition: 0.25s linear;
+    opacity: 0;
+    z-index: -1;
 }
 
 .modal-op {
-  background-color: rgb(0, 0, 0);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 10000px;
-  height: 100vh;
-  background-color: rgb(0, 0, 0);
-  transition: 0.2s linear;
-  margin-left: -1000px;
-  opacity: 0.1;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10000px;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+    margin-left: -1000px;
+    opacity: 0.1;
 }
 
 .check-ok {
-  display: block;
-  width: 100%;
-  padding-top: 20px;
-  margin-top: 15px;
-  text-align: center;
-  margin: 0 auto;
-  text-shadow: 0.5px 0.5px rgb(118, 0, 59);
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    margin-top: 15px;
+    text-align: center;
+    margin: 0 auto;
+    text-shadow: 0.5px 0.5px rgb(118, 0, 59);
 }
 
 .form {
-  position: absolute;
-  top: 50%;
-  padding: 25px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: auto;
-  width: 500px;
-  height: 700px;
-  background-color: white;
-  box-shadow: 0 0 50px rgba(255, 59, 105, 0.675);
-  border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    padding: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 500px;
+    height: 700px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(255, 59, 105, 0.675);
+    border-radius: 10px;
 }
 
 #voucherField {
-  display: none;
+    display: none;
 }
 
 .form-content {
-  padding-top: 10px;
-  width: 100%;
-  height: 220px;
-  align-items: center;
-  text-align: center;
+    padding-top: 10px;
+    width: 100%;
+    height: 220px;
+    align-items: center;
+    text-align: center;
 }
 
 .form-fill {
-  width: 100%;
-  padding-top: 200px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
+    width: 100%;
+    padding-top: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 .form-content > img {
-  width: 80%;
-  padding-top: 10px;
-  height: 280px;
+    width: 80%;
+    padding-top: 10px;
+    height: 280px;
 }
 
 .form-text {
-  color: #ff5f6d;
-  font-weight: bold;
-  line-height: 1.8;
-  font-size: 30px;
+    color: #ff5f6d;
+    font-weight: bold;
+    line-height: 1.8;
+    font-size: 30px;
 }
 
 .form-fill > input {
-  width: 80%;
-  height: 50px;
-  border: 2px solid var(--pastel-100);
-  font-size: 20px;
-  padding-left: 20px;
-  border-radius: 5px;
+    width: 80%;
+    height: 50px;
+    border: 2px solid var(--pastel-100);
+    font-size: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
 }
 
 .form-fill > input:focus {
-  outline: none !important;
-  border: 1.5px solid var(--pastel-500);
+    outline: none !important;
+    border: 1.5px solid var(--pastel-500);
 }
 
 .form-voucher {
-  line-height: 1.6;
-  color: #00c3ff;
-  font-weight: bold;
-  padding-bottom: 5px;
-  font-size: 25px;
+    line-height: 1.6;
+    color: #00c3ff;
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-size: 25px;
 }
 
 .form-voucher1 {
-  color: #333;
-  line-height: 1.5;
-  font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    font-size: 18px;
 }
 
 .submit {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
 }
 
 .btn {
-  cursor: pointer;
-  border: none;
-  background-color: #ff5f6d;
-  margin-top: 25px;
-  padding: 8px 40px;
-  border-radius: 50px;
-  font-size: 30px;
-  color: white;
+    cursor: pointer;
+    border: none;
+    background-color: #ff5f6d;
+    margin-top: 25px;
+    padding: 8px 40px;
+    border-radius: 50px;
+    font-size: 30px;
+    color: white;
 }
 
 .disabled {
-  pointer-events: none;
-  opacity: 0.6;
+    pointer-events: none;
+    opacity: 0.6;
 }
 
 .btn:hover {
-  opacity: 0.8;
-  transition: 0.3s ease;
+    opacity: 0.8;
+    transition: 0.3s ease;
 }
 
 select {
-  padding: 0;
-  width: 70%;
-  height: 40px;
-  border: 2px solid var(--pastel-100);
-  font-size: 18px;
+    padding: 0;
+    width: 70%;
+    height: 40px;
+    border: 2px solid var(--pastel-100);
+    font-size: 18px;
 }
 
 select:focus {
-  border: 2px solid var(--pastel-500);
+    border: 2px solid var(--pastel-500);
 }
 
 .on {
-  opacity: 1 !important;
-  z-index: 99 !important;
+    opacity: 1 !important;
+    z-index: 99 !important;
 }
 .alert {
-  height: 100vh;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  color: rgb(255, 0, 102);
-  font-size: bold;
-  text-transform: uppercase;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: rgb(255, 0, 102);
+    font-size: bold;
+    text-transform: uppercase;
 }
 .img_btn.zoom {
-  width: 112px !important;
+    width: 112px !important;
 }
 
 @media (max-width: 900px) {
-  .img_btn.zoom {
-    width: 62px !important;
-  }
-  .lucky > img {
-    width: 320px !important;
-    height: 320px !important;
-  }
+    .img_btn.zoom {
+        width: 62px !important;
+    }
+    .lucky > img {
+        width: 320px !important;
+        height: 320px !important;
+    }
 
-  .form {
-    width: 300px;
-    height: 400px;
-  }
-  .form-fill > input {
-    width: 300px;
-    border: 1px solid var(--pastel-100);
-  }
-  .check-alert {
-    width: 325px;
-  }
-  .spiner > img:nth-child(2) {
-    width: 60px;
-  }
-  .spiner {
-    z-index: 1;
-    width: 36%;
-    height: auto;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    right: 10%;
-    bottom: 10px;
-  }
-  .form-text {
-    font-size: 13px;
-  }
+    .form {
+        width: 300px;
+        height: 400px;
+    }
+    .form-fill > input {
+        width: 300px;
+        border: 1px solid var(--pastel-100);
+    }
+    .check-alert {
+        width: 325px;
+    }
+    .spiner > img:nth-child(2) {
+        width: 60px;
+    }
+    .spiner {
+        z-index: 1;
+        width: 36%;
+        height: auto;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        right: 10%;
+        bottom: 10px;
+    }
+    .form-text {
+        font-size: 13px;
+    }
 
-  .form-fill > input {
-    font-size: 13px;
-  }
-  .form-voucher,
-  .form-voucher1 {
-    font-size: 13px;
-  }
-  .form-content > img {
-    width: 90%;
-    padding-top: 10px;
-    height: 150px;
-  }
-  .form-fill {
-    padding-top: 0px;
-    height: 200px;
-    margin-top: -30px;
-  }
-  .form-fill > input {
-    width: 250px;
-    height: 25px;
-    font-size: 12px;
-    font-weight: normal;
-  }
-  .form-fill > select {
-    height: 20px;
-    font-size: 12px;
-  }
-  .btn {
-    margin-top: -10px;
-    padding: 3px 15px;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-  .spiner > img:nth-child(1) {
-    margin-top: -20px;
-    width: 92%;
-  }
-  .spiner > img:nth-child(2) {
-    margin-top: -10px;
-  }
-  .spiner > img:nth-child(3) {
-    bottom: 50px;
-  }
+    .form-fill > input {
+        font-size: 13px;
+    }
+    .form-voucher,
+    .form-voucher1 {
+        font-size: 13px;
+    }
+    .form-content > img {
+        width: 90%;
+        padding-top: 10px;
+        height: 150px;
+    }
+    .form-fill {
+        padding-top: 0px;
+        height: 200px;
+        margin-top: -30px;
+    }
+    .form-fill > input {
+        width: 250px;
+        height: 25px;
+        font-size: 12px;
+        font-weight: normal;
+    }
+    .form-fill > select {
+        height: 20px;
+        font-size: 12px;
+    }
+    .btn {
+        margin-top: -10px;
+        padding: 3px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    .spiner > img:nth-child(1) {
+        margin-top: -20px;
+        width: 92%;
+    }
+    .spiner > img:nth-child(2) {
+        margin-top: -10px;
+    }
+    .spiner > img:nth-child(3) {
+        bottom: 50px;
+    }
 }
