@@ -33,24 +33,20 @@ imgbtn.addEventListener("click", function () {
     let deg = Math.floor(Math.random() * 99);
     console.log(deg);
     if (deg >= 0 && deg < 25) {
-        lucky.style.transform = "rotate(2580deg)";
-        voucherF.innerHTML = `Ưu đãi 20% tháng 8`;
-        PP(".img_voucher").src = "./img/a.jpg";
-    } else if (deg > 26 && deg < 50) {
-        lucky.style.transform = "rotate(2700deg)";
+        lucky.style.transform = "rotate(2760deg)";
+        voucherF.innerHTML = `Ngâm chân thải độc`;
+    } else if (deg > 26 && deg < 60) {
+        lucky.style.transform = "rotate(2880deg)";
         voucherF.innerHTML = `Áo mưa - Nón Bảo Hiểm`;
-        PP(".img_voucher").src = "./img/nonbaohiem.jpg";
-    } else if (deg > 51 && deg < 75) {
+    } else if (deg > 61 && deg < 74) {
         lucky.style.transform = "rotate(2460deg)";
-        voucherF.innerHTML = `Tặng 800k cho hoá đơn 4tr`;
-        PP(".img_voucher").src = "./img/500k.jpg";
-    } else if (deg > 76 && deg < 100) {
-        lucky.style.transform = "rotate(2400deg)";
-        voucherF.innerHTML = `Tặng DV gội đầu thảo dược:`;
-        PP(".img_voucher").src =
-            "http://channel.mediacdn.vn/prupload/439/2018/02/img20180205164606046.jpg";
+        voucherF.innerHTML = `Chăm sóc da cơ bản`;
+    } else if (deg > 75 && deg < 87) {
+        lucky.style.transform = "rotate(3000deg)";
+        voucherF.innerHTML = `Đặc trị mụn`;
     } else {
-        return;
+        lucky.style.transform = "rotate(2945deg)";
+        voucherF.innerHTML = `Voucher 20%`;
     }
 });
 btn.addEventListener("click", () => {
