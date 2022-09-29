@@ -345,6 +345,7 @@ table {
     color: #00c3ff;
     font-weight: bold;
     padding-bottom: 5px;
+    font-size: 5vw !important;
 }
 
 .form-voucher1 {
@@ -434,7 +435,7 @@ select:focus {
     align-items: center;
 }
 .form-text {
-    font-size: 5vw;
+    font-size: 4.5vw;
 }
 
 .form-fill > input {
