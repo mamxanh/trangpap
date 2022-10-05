@@ -9,6 +9,7 @@ const thanhcong = document.querySelector(".thanhcong");
 const alert = document.querySelector(".check-alert");
 const nameF = document.querySelector("#nameField");
 const phoneF = document.querySelector("#phoneField");
+const placeF = document.querySelector("#placeField");
 let nameA = $("#nameField").val();
 let email = $("#phoneField").val();
 let mess = $("#placeField").val();
@@ -32,25 +33,27 @@ imgbtn.addEventListener("click", function () {
     lucky.style.transition = "5.5s ease-out";
     let deg = Math.floor(Math.random() * 99);
     console.log(deg);
-    if (deg >= 0 && deg < 25) {
-        lucky.style.transform = "rotate(2760deg)";
-        voucherF.innerHTML = `Ngâm chân thải độc`;
-    } else if (deg > 26 && deg < 60) {
-        lucky.style.transform = "rotate(2880deg)";
-        voucherF.innerHTML = `Áo mưa - Nón Bảo Hiểm`;
-    } else if (deg > 61 && deg < 74) {
-        lucky.style.transform = "rotate(2460deg)";
-        voucherF.innerHTML = `Chăm sóc da cơ bản`;
-    } else if (deg > 75 && deg < 87) {
-        lucky.style.transform = "rotate(3000deg)";
-        voucherF.innerHTML = `Đặc trị mụn`;
-    } else {
+    if (deg >= 0 && deg < 40) {
         lucky.style.transform = "rotate(2945deg)";
         voucherF.innerHTML = `Voucher 20%`;
+    } else if (deg > 41 && deg < 85) {
+        lucky.style.transform = "rotate(2880deg)";
+        voucherF.innerHTML = `Áo mưa - Nón Bảo Hiểm`;
+    } else {
+        lucky.style.transform = "rotate(2820deg)";
+        voucherF.innerHTML = `Chăm sóc da cơ bản`;
     }
+    // else if (deg > 75 && deg < 87) {
+    //     lucky.style.transform = "rotate(3000deg)";
+    //     voucherF.innerHTML = `Đặc trị mụn`;
+    // }
+    // else {
+    //     lucky.style.transform = "rotate(2945deg)";
+    //     voucherF.innerHTML = `Voucher 20%`;
+    // }
 });
 btn.addEventListener("click", () => {
-    if (nameF.value.length && phoneF.value.length) {
+    if (nameF.value.length && phoneF.value.length && placeF.value.length) {
         lucky.style.transition = "0s ease-out";
         lucky.style.transform = "rotate(0deg)";
         PP(".firer").classList.add("fire");
